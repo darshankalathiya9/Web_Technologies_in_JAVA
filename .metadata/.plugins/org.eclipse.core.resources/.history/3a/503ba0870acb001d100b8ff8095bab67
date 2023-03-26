@@ -1,0 +1,13 @@
+package Dao;
+
+import Model.Student;
+
+public class StudentDao {
+	public static void InsertStudent(Student s) {
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

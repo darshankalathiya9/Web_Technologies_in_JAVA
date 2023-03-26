@@ -1,0 +1,40 @@
+package Controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Model.Student;
+
+@WebServlet("/StudentController")
+public class StudentController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	public StudentController() {
+		super();
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
+		String action = request.getParameter("action");
+		System.out.println(action);
+		
+		if (action.equalsIgnoreCase("Register")) {
+			Student student = new Student();
+			student.setFirstName(request.getParameter("FirstName"));
+			student.setLastName(request.getParameter("LastName"));
+			student.setEmail(request.getParameter("Email"));
+			student.setMobile(Long.parseLong(request.getParameter("Mobile")));
+			
+		}
+	}
+
+}

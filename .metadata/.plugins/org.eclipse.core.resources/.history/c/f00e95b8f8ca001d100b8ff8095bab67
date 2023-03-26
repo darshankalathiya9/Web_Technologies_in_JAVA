@@ -1,0 +1,7 @@
+package Model;
+
+public class Student {
+	private int id;
+	private String FirstName, LastName, Email, Gender, Password; 
+	private long Mobile;
+}

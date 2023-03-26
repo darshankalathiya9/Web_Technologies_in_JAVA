@@ -1,0 +1,17 @@
+package Dao;
+
+import java.sql.Connection;
+
+import Connection.DBConnection;
+import Model.Student;
+
+public class StudentDao {
+	public static void InsertStudent(Student s) {
+		try {
+			Connection conn = DBConnection.createconnection();
+			String sql = "insert into student () values ()";
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
