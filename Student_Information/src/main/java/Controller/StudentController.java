@@ -75,7 +75,7 @@ public class StudentController extends HttpServlet {
 			int ID = Integer.parseInt(request.getParameter("ID"));
 			Student student = StudentDao.getUserByID(ID);
 
-			request.setAttribute("data", student);
+			request.setAttribute("data1", student);
 			request.getRequestDispatcher("Student-Update.jsp").forward(request, response);
 		}
 

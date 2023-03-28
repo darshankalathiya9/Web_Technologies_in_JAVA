@@ -82,35 +82,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- banner-bottom -->
     <section class="banner-bottom py-5">
         <div class="container py-md-4">
-            <h3 class="tittle-w3layouts two text-center"> <%=s.getFirstName() %>Update</h3><hr>
+            <h3 class="tittle-w3layouts two text-center"> <%=s.getFirstName() %> Update</h3><hr>
             <div class="comment-top mt-5 row">
                 <div class="col-lg-12 comment-bottom w3pvt_mail_grid_right">
+                
+                <%Student s1 = (Student) request.getAttribute("data1"); %>
                     <form action="StudentController" method="post">
                         <div class="row">
-							<input type="hidden" name="ID" value="<%=s.getID()%>">
+							<input type="hidden" name="ID" value="<%=s1.getID()%>">
                             <div class="col-lg-6 form-group text-center">
                                 <label>First Name</label>
-                                <input class="form-control" type="text" name="FirstName"  value=<%=s.getFirstName() %> placeholder="" required="">
+                                <input class="form-control" type="text" name="FirstName"  value=<%=s1.getFirstName() %> placeholder="" required="">
                             </div>
                             <div class="col-lg-6 form-group text-center">
                                 <label>Last Name</label>
-                                <input class="form-control" type="text" name="LastName" value=<%=s.getLastName()%> placeholder="" required="">
+                                <input class="form-control" type="text" name="LastName" value=<%=s1.getLastName()%> placeholder="" required="">
                             </div>
                              <div class="col-lg-6 form-group text-center">
                                 <label>Email</label>
-                                <input class="form-control" type="email" name="Email" value=<%=s.getEmail() %> placeholder="" required="">
+                                <input class="form-control" type="email" name="Email" value=<%=s1.getEmail() %> placeholder="" required="">
                             </div>
                             <div class="col-lg-6 form-group text-center">
                                 <label>Phone Number</label>
-                                <input class="form-control" type="text" name="Mobile" value=<%=s.getMobile() %> placeholder="" required="">
+                                <input class="form-control" type="text" name="Mobile" value=<%=s1.getMobile() %> placeholder="" required="">
                             </div>
                              <div class="col-lg-6 form-group text-center">
                                 <label>Gender</label>
-                                <input class="form-control" type="text" name="Gender" value=<%=s.getGender() %> placeholder="" required="">
+                                <input class="form-control" type="text" name="Gender" value=<%=s1.getGender() %> placeholder="" required="">
                             </div>
                             <div class="col-lg-6 form-group text-center">
                                 <label>Password</label>
-                                <input class="form-control" type="password" name="Password" value=<%=s.getPassword() %> placeholder="" required="">
+                                <input class="form-control" type="password" name="Password" value=<%=s1.getPassword() %> placeholder="" required="">
                             </div>
                         </div>
                         <div class="text-center">
